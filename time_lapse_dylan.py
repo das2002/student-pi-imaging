@@ -24,7 +24,7 @@ with PiCamera() as camera:
     camera.start_preview()
 
     try:
-        for filename in camera.capture_continuous(RASPI_PATH + 'image{}.png'.format(timestamp)):
+        for filename in camera.capture_continuous(RASPI_PATH + 'image{}.png'.format(datetime.now())):
 	    print(filename)
             time.sleep(INTERVAL)
 		
