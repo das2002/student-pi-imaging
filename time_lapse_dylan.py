@@ -12,6 +12,7 @@ time_at_start = time.time()
 
 # the path where the raspberry pi will store its file
 RASPI_PATH = "/home/pi/{}/".format(time_at_start)
+os.mkdirs(RASPI_PATH)
 
 # seconds between captures
 INTERVAL = 1
@@ -23,7 +24,7 @@ with PiCamera() as camera:
     camera.start_preview()
 
     try:
-        for filename in camera.capture_continuous(RASPI_PATH + 'image{timestamp}.png'):
+        for filename in camera.capture_continuous(RASPI_PATH + 'image{}.png'.format(timestamp)):
 	    print(filename)
             time.sleep(INTERVAL)
 		
