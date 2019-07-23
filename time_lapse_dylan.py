@@ -11,7 +11,7 @@ import time
 time_at_start = time.time()
 
 # the path where the raspberry pi will store its file
-RASPI_PATH = f"/home/raspberrypi/{time_at_start}/"
+RASPI_PATH = "/home/pi/{}/".format(time_at_start)
 
 # seconds between captures
 INTERVAL = 1
