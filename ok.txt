@@ -1,0 +1,20 @@
+Sams Teach Yourself C++ in 24 Hours Notes
+
+Hour 1: Writing Your First Program
+	Notes:
+		-Created by Bjarne Stroustop to create elegant and powerful code
+		-Compiler turns a program from a human-readable form called source code into a machine-runnable form called machine code
+		-C++ are turnt from source code in a text editor, which the compiler converts into object file, which the linker turns into executable program
+		-Library is a collection of linkable files that provide useful functions and clases that you can rely on in your programs
+		-Function is a block of code that performs a task
+		-Class is the definition of a new type of data and related functions.
+	
+	Quiz:
+		1. a
+		2. a
+		3. c
+		
+Hour 2: Organizing the Parts of a Program
+	Notes:
+		-
+		
