@@ -32,4 +32,4 @@ with PiCamera() as camera:
             if time.time() - time_at_start >= SESSION_LENGTH:
                 break
     finally:
-camera.stop_preview()
+	camera.stop_preview()
