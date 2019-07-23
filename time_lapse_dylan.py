@@ -12,7 +12,7 @@ time_at_start = time.time()
 
 # the path where the raspberry pi will store its file
 RASPI_PATH = "/home/pi/{}/".format(time_at_start)
-os.mkdirs(RASPI_PATH)
+os.makedirs(RASPI_PATH)
 
 # seconds between captures
 INTERVAL = 1
