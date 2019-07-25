@@ -9,7 +9,8 @@ import picamera
 import numpy as np
 import cv2
 
-RASPI_PATH = "/home/pi/"
+time_at_start = time.time()
+RASPI_PATH = "/home/pi/time_at_start/"
 INTERVAL = 2# the time interval (in seconds) between pictures
 SESSION_LENGTH = 600# the duration of the script
 
@@ -18,9 +19,9 @@ with picamera.PiCamera() as camera:
     camera.framerate = 24
     time.sleep(2)
     image = np.empty((240 * 320 * 3,), dtype=np.uint8)
-    for filename in camera.capture_continuous(RASPI_PATH + 'img{counter:03d}.bgr''):
+    for filename in camera.capture_continuous(RASPI_PATH + 'img{counter:03d}.bgr'):
         print('Captured %s' % filename)
-        sleep(INTERVAL) # wait 5 seconds
+        sleep(INTERVAL) # wait INTERVAL seconds
     #camera.capture(image, 'bgr')
         image = image.reshape((240, 320, 3))
 
